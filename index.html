@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="https://kit.fontawesome.com/4a5e39d1d1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="scss/registro.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -15,8 +16,8 @@
         <div class="caja_form">
 
             <div class="caja_form_boton">
-                <button type="button" class="precionar_boton" onclick="login();"><i class="fa-solid fa-user-check"></i> alumno</button>
-                <button type="button" class="precionar_boton" onclick="registro();"><i class="fa-solid fa-chalkboard-user"></i> maestro</button>
+                <button type="button" class="precionar_boton active" onclick="login();" id="alm"><i class="fa-solid fa-user-check"></i> alumno</button>
+                <button type="button" class="precionar_boton" onclick="registro();" id="mst"><i class="fa-solid fa-chalkboard-user"></i> maestro</button>
             </div>
             <div class="social">
                 <a href=""><i class="fa-brands fa-facebook"></i></a>
@@ -52,8 +53,12 @@
                 </select>
                 <input type="text" class="input_field" placeholder="ingresa un usuario" required>
                 <input type="password" class="input_field" placeholder="ingresa tu contraseña de acceso" required>
-                <input type="checkbox" name="" class="input_check">
-                <span>Acepta guardar esta información.</span>
+
+                <div class="grid_section">
+                    <input type="checkbox" name="" class="input_check sect1">
+                    <span class="sect2" >Acepta guardar esta información.</span>
+                </div>
+
                 <button type="submit" name="" class="enviar_boton">Registrarse</button>
             </form>
 
@@ -83,10 +88,12 @@
                 </select>
                 <input type="text" class="input_field" placeholder="ingresa un usuario" required>
                 <input type="password" class="input_field" placeholder="ingresa tu contraseña de acceso" required>
+
                 <div class="grid_section">
                     <input type="checkbox" name="" class="input_check sect1">
                     <span class="sect2" >Acepta guardar esta información.</span>
                 </div>
+
                 <button type="submit" name="" class="enviar_boton">Registrarse</button>
             </form>
 

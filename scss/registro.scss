@@ -34,6 +34,8 @@ img{
         }
     }
     .caja_form_boton{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         width: 240px;
         margin: 30px auto;
         position: relative;
@@ -46,16 +48,6 @@ img{
             border: none;
             outline: none;
             position: relative;
-        }
-        #elegir{
-            top: 0;
-            left: 0;
-            position: absolute;
-            width: 120px;
-            height: 100%;
-            background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-            border-radius: 30px;
-            transition: .8s;
         }
     }
     .social{
@@ -79,9 +71,9 @@ img{
     width: 280px;
     transition: .8s;
     display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     .input_field{
         width: 100%;
         padding: 10px 5px;
@@ -126,15 +118,25 @@ img{
 
 .grid_section{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    grid-template-areas: "s1 s2 s2";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "s1 s2 s2 s2";
     .sect1{
         grid-area: s1;
     }
     .sect2{
         grid-area: s2;
     }
+}
+
+.active{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    border-radius: 30px;
+    transition: .8s;
 }
 
 #registro{
